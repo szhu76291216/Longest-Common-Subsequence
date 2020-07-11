@@ -7,13 +7,17 @@ $$
 where  `x[m:n]` is the substring including the characters from index `m` to index `n`.
 
 Then if `x[i]` and `y[j]` are the same, we can calculate `C(i, j)` as
+
 $$
 C(i, j) = C(i-1, j-1)
 $$
+
 And if they are not the same, we either discard `x[i]` or discard `y[j]`
+
 $$
 C(i, j) = \max \{C(i-1, j), C(i, j-1)\}
 $$
+
 The pseudo-code for dynamic programming is
 
 ```pascal
